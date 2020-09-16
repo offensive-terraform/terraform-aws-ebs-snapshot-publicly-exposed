@@ -5,3 +5,7 @@ output "ssh_private_key" {
 output "ssh_ec2_connect" {
   value = "ssh -h hack.pem ubuntu@${aws_instance.this.public_ip}"
 }
+
+output "ebs_volume_mount_path" {
+  value = "/usr/src/hack"
+}
