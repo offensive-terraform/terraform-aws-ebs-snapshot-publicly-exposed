@@ -1,8 +1,3 @@
-provider "aws" {
-  region  = "us-east-1"
-  profile = "terraform"
-}
-
 resource "tls_private_key" "this" {
   algorithm = "RSA"
 }
@@ -13,7 +8,7 @@ resource "aws_key_pair" "this" {
 }
 
 data "template_file" "user_data" {
-  template = file("./payload.sh")
+  template = file(".terraform/modules/publicly-exposed-ebs-snapshot-inspector/payload.sh")
 }
 
 resource "aws_instance" "this" {
