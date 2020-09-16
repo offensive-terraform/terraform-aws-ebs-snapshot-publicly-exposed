@@ -4,6 +4,6 @@ variable "public_snapshot_id" {
 }
 
 variable "public_snapshot_region" {
-  type = "string"
+  type = string
   description = "(Required) The region of the public snapshot."
 }
