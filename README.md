@@ -4,7 +4,7 @@
 ![OffensiveTerraform](https://img.shields.io/badge/offensive-terraform-blueviolet)
 ![OffensiveTerraform](https://img.shields.io/badge/aws-important)
 
-Offensive Terraform module which copies publicly exposed EBS snapshot to us-east-1 region in attacker's AWS account and creates EBS volume from a copied EBS snapshot. After that, the module attaches and mounts an EBS volume to an EC2 instance.
+Offensive Terraform module which copies publicly exposed EBS snapshot to us-east-1 region in attacker's AWS account and creates EBS volume from the copied EBS snapshot. After that, the module attaches and mounts the EBS volume to an EC2 instance. Finally, attacker can ssh into an EC2 instance and inspect a mounted volume "/usr/src/hack".
 
 ![Attack Diagram](https://raw.githubusercontent.com/offensive-terraform/ebs-snapshot-publicly-exposed/master/diagram.jpg)
 
