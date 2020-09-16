@@ -1,4 +1,4 @@
-# AWS S3 Subdomain Takeover
+# AWS EBS Snapshot Publicly Exposed
 
 ![OffensiveTerraform](https://img.shields.io/badge/hack-success)
 ![OffensiveTerraform](https://img.shields.io/badge/offensive-terraform-blueviolet)
