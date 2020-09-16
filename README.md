@@ -10,10 +10,15 @@ Offensive Terraform module which copies publicly exposed EBS snapshot to us-east
 
 ## Usage
 ```
+provider "aws" {
+  region = "us-east-1"
+}
+
 module "ebs-snapshot-publicly-exposed" {
     source  = "offensive-terraform/ebs-snapshot-publicly-exposed/aws"
 
     public_snapshot_id = "snap-000000000000"
+    public_snapshot_region = "us-west-2"
 }
 
 output "ssh_private_key" {

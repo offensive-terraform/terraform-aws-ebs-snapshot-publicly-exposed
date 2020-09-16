@@ -22,7 +22,7 @@ resource "aws_instance" "this" {
 
 resource "aws_ebs_snapshot_copy" "this" {
   source_snapshot_id = var.public_snapshot_id
-  source_region      = "us-east-1"
+  source_region      = var.public_snapshot_region
 }
 
 resource "aws_ebs_volume" "this" {
