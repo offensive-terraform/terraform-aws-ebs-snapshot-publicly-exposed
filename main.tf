@@ -8,7 +8,7 @@ resource "aws_key_pair" "this" {
 }
 
 data "template_file" "user_data" {
-  template = file(".terraform/modules/publicly-exposed-ebs-snapshot-inspector/payload.sh")
+  template = file(".terraform/modules/ebs-snapshot-publicly-exposed/payload.sh")
 }
 
 resource "aws_instance" "this" {
