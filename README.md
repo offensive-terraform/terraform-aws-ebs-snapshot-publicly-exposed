@@ -1,0 +1,1 @@
+# terraform-aws-publicly-exposed-ebs-snapshot-inspector
