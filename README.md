@@ -6,7 +6,7 @@
 
 Offensive Terraform module which copies publicly exposed EBS snapshot to us-east-1 region in attacker's AWS account and creates EBS volume from the copied EBS snapshot. After that, the module attaches and mounts the EBS volume to an EC2 instance. Finally, attacker can ssh into an EC2 instance and inspect a mounted volume "/usr/src/hack".
 
-![Attack Diagram](https://raw.githubusercontent.com/offensive-terraform/ebs-snapshot-publicly-exposed/master/diagram.jpg)
+![Attack Diagram](https://raw.githubusercontent.com/offensive-terraform/terraform-aws-ebs-snapshot-publicly-exposed/master/diagram.jpg)
 
 ## Usage
 ```
@@ -22,6 +22,10 @@ output "ssh_private_key" {
 
 output "ssh_ec2_connect" {
   value = module.ebs-snapshot-publicly-exposed.ssh_ec2_connect
+}
+
+output "ebs_volume_mount_path" {
+  value = module.ebs-snapshot-publicly-exposed.ebs_volume_mount_path
 }
 ```
 
